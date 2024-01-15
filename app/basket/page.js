@@ -1,4 +1,4 @@
-import MainUI from "./components/mainUI";
+import MainUI from "../components/mainUI";
 
 export async function getData() {
 	const res = await fetch(`https://api.punkapi.com/v2/beers`)
@@ -7,9 +7,9 @@ export async function getData() {
 	return data
 }
 
-const Home = async () => {
+const Basket = async () => {
 	const data = await getData();
-	return <MainUI data={data} pageName={'Home'} />
+	return <MainUI data={data} pageName={'Basket'} />
 }
 
-export default Home;
+export default Basket;
